@@ -9,28 +9,29 @@ var classroom = [{
     },
     clases: [{
             nombreClase: "Programación II",
+            fondo: "img/fondos/1.jpeg",
             codigo: "CSD33XZ",
             seccion: "1300",
             descripcion: "Clase donde se enseña a programar",
             participantes: [{
                     nombre: "Krillin",
                     correo: "krillin@gmail.com",
-                    imagen: "krillin.jpg",
+                    imagen: "img/users/krillin.jpg",
                 },
                 {
                     nombre: "Uub",
                     correo: "Uub@gmail.com",
-                    imagen: "Uub.jpg"
+                    imagen: "img/users/Uub.jpg"
                 },
                 {
                     nombre: "Videl",
                     correo: "Videl@gmail.com",
-                    imagen: "videl.jpg"
+                    imagen: "img/users/videl.jpg"
                 },
                 {
                     nombre: "Bulma",
                     correo: "bulma@gmail.com",
-                    imagen: "bulma.jpg"
+                    imagen: "img/users/bulma.jpg"
                 }
 
                 // ...Otro participante
@@ -69,28 +70,29 @@ var classroom = [{
         },
         {
             nombreClase: "POO",
+            fondo: "img/fondos/1.jpeg",
             codigo: "IS-400",
             seccion: "1500",
             descripcion: "Clase donde se enseña a programar",
             participantes: [{
                     nombre: "Krillin",
                     correo: "krillin@gmail.com",
-                    imagen: "krillin.jpg",
+                    imagen: "img/users/krillin.jpg",
                 },
                 {
                     nombre: "Uub",
                     correo: "Uub@gmail.com",
-                    imagen: "Uub.jpg"
+                    imagen: "img/users/Uub.jpg"
                 },
                 {
                     nombre: "Videl",
                     correo: "Videl@gmail.com",
-                    imagen: "videl.jpg"
+                    imagen: "img/users/videl.jpg"
                 },
                 {
                     nombre: "Bulma",
                     correo: "bulma@gmail.com",
-                    imagen: "bulma.jpg"
+                    imagen: "img/users/bulma.jpg"
                 }
 
                 // ...Otro participante
@@ -129,28 +131,29 @@ var classroom = [{
         },
         {
             nombreClase: "Programacion Web",
+            fondo: "img/fondos/1.jpeg",
             codigo: "IS-900",
             seccion: "1700",
             descripcion: "Clase donde se enseña a programar",
             participantes: [{
                     nombre: "Krillin",
                     correo: "krillin@gmail.com",
-                    imagen: "krillin.jpg",
+                    imagen: "img/users/krillin.jpg",
                 },
                 {
                     nombre: "Uub",
                     correo: "Uub@gmail.com",
-                    imagen: "Uub.jpg"
+                    imagen: "img/users/Uub.jpg"
                 },
                 {
                     nombre: "Videl",
                     correo: "Videl@gmail.com",
-                    imagen: "videl.jpg"
+                    imagen: "img/users/videl.jpg"
                 },
                 {
                     nombre: "Bulma",
                     correo: "bulma@gmail.com",
-                    imagen: "bulma.jpg"
+                    imagen: "img/users/bulma.jpg"
                 }
 
                 // ...Otro participante
@@ -195,32 +198,33 @@ var classroom = [{
     instructor: {
         nombre: "Vegeta",
         correo: "vegeta@gmail.com",
-        imagen: "vegeta.jpg",
+        imagen: "img/users/vegeta.jpg",
     },
     clases: [{
             nombreClase: "Programación II",
+            fondo: "img/fondos/1.jpeg",
             codigo: "CSD33XZ",
             seccion: "1300",
             descripcion: "Clase donde se enseña a programar",
             participantes: [{
                     nombre: "Krillin",
                     correo: "krillin@gmail.com",
-                    imagen: "krillin.jpg",
+                    imagen: "img/users/krillin.jpg",
                 },
                 {
                     nombre: "Uub",
                     correo: "Uub@gmail.com",
-                    imagen: "Uub.jpg"
+                    imagen: "img/users/Uub.jpg"
                 },
                 {
                     nombre: "Videl",
                     correo: "Videl@gmail.com",
-                    imagen: "videl.jpg"
+                    imagen: "img/users/videl.jpg"
                 },
                 {
                     nombre: "Bulma",
                     correo: "bulma@gmail.com",
-                    imagen: "bulma.jpg"
+                    imagen: "img/users/bulma.jpg"
                 }
 
                 // ...Otro participante
@@ -259,28 +263,29 @@ var classroom = [{
         },
         {
             nombreClase: "POO",
+            fondo: "img/fondos/4.jpeg",
             codigo: "IS-400",
             seccion: "1500",
             descripcion: "Clase donde se enseña a programar",
             participantes: [{
                     nombre: "Krillin",
                     correo: "krillin@gmail.com",
-                    imagen: "krillin.jpg",
+                    imagen: "img/users/krillin.jpg",
                 },
                 {
                     nombre: "Uub",
                     correo: "Uub@gmail.com",
-                    imagen: "Uub.jpg"
+                    imagen: "img/users/Uub.jpg"
                 },
                 {
                     nombre: "Videl",
                     correo: "Videl@gmail.com",
-                    imagen: "videl.jpg"
+                    imagen: "img/users/videl.jpg"
                 },
                 {
                     nombre: "Bulma",
                     correo: "bulma@gmail.com",
-                    imagen: "bulma.jpg"
+                    imagen: "img/users/bulma.jpg"
                 }
 
                 // ...Otro participante
@@ -319,28 +324,29 @@ var classroom = [{
         },
         {
             nombreClase: "Programacion Web",
+            fondo: "img/fondos/4.jpeg",
             codigo: "IS-900",
             seccion: "1700",
             descripcion: "Clase donde se enseña a programar",
             participantes: [{
                     nombre: "Krillin",
                     correo: "krillin@gmail.com",
-                    imagen: "krillin.jpg",
+                    imagen: "img/users/krillin.jpg",
                 },
                 {
                     nombre: "Uub",
                     correo: "Uub@gmail.com",
-                    imagen: "Uub.jpg"
+                    imagen: "img/users/Uub.jpg"
                 },
                 {
                     nombre: "Videl",
                     correo: "Videl@gmail.com",
-                    imagen: "videl.jpg"
+                    imagen: "img/users/videl.jpg"
                 },
                 {
                     nombre: "Bulma",
                     correo: "bulma@gmail.com",
-                    imagen: "bulma.jpg"
+                    imagen: "img/users/bulma.jpg"
                 }
 
                 // ...Otro participante
@@ -392,3 +398,93 @@ for (i = 0; i < classroom.length; i++) {
 
 let aula = JSON.parse(localStorage.getItem('classroom'));
 console.log('Estos es lo que devuele', aula);
+
+function listarInstructores() {
+    let aula = JSON.parse(localStorage.getItem('classroom'));
+    for (i = 0; i < aula.length; i++) {
+        const aulaImagen = aula[i];
+        console.log('Aqui devolver la imagen', aulaImagen.instructor.imagen);
+    }
+}
+listarInstructores();
+
+function instructorSeleccionado() {
+
+}
+
+function generarClases() {
+    let aula = JSON.parse(localStorage.getItem('classroom'));
+    document.getElementById('generar-clases').innerHTML = ``;
+    for (let i = 0; i < aula.length; i++) {
+        for (let j = 0; j < aula[i].clases.length; j++) {
+            const aulaClases = aula[i].clases[j];
+            for (let k = 0; k < aula[i].clases[j].asignaciones.length; k++) {
+                const aulAsignaciones = aula[i].clases[j].asignaciones[k]
+                console.log('Las clases son:', aulaClases.nombreClase);
+                document.getElementById('generar-clases').innerHTML +=
+                    `<div class="my-4 col-lg-3 col-md-4 col-sm-10">
+                    <div class="card">
+                        <div style="    position: relative; display: inline-block; text-align: start-center">
+                            <img src=${aulaClases.fondo}  class="card-img-top " alt="... ">
+                            <h3 >${aulaClases.nombreClase}</h3>
+                            <h5>${aulaClases.seccion}</h5>
+                        </div>
+                <div class="card-body">
+                    <h6 class="card-title">${aulAsignaciones.fecha}</h6>
+                    <p class="card-text ">${aulAsignaciones.titulo} </p>
+                </div>
+                <ul class="list-group list-group-flush ml-auto">
+                    <li class="list-group-item">
+                    <i class="fas fa-chart-line ml-10"></i>
+                    <i class="far fa-folder"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>`;
+            }
+
+        }
+    }
+    /*
+    <div class="container-fluid">
+        <div class="row" id="clases">
+            <div class="my-4 col-lg-2 col-md-3 col-6">
+                <div class="card">
+                    <div style="position: relative; display: inline-block; text-align: center;">
+                        <img src="img/clases-pics/2.jpg" class="card-img-top" alt="... ">
+                        <h3 style="position: absolute; bottom: 5px; left: 10px; color: white;">Clase 1</h3>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title ">${aplicacion.nombre}</h5>
+                        <p class="card-text ">${aplicacion.desarrollador} </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    */
+
+    /*
+    for (let i = 0; i < aula.length; i++) {
+        document.getElementById('generar-clases').innerHTML +=
+            `<div class="my-4 col-lg-2 col-md-3 col-6">
+            <div class="card">
+                <img src="img/clases-pics/2.jpg" class="card-img-top " alt="... ">
+                <div class="card-body">
+                    <h5 class="card-title ">${aula[i].instructor.nombre}</h5>
+                    <p class="card-text ">${aula[i].instructor.correo}  </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                </ul>
+            </div>
+        </div>`;
+    }
+*/
+
+}
+
+generarClases();

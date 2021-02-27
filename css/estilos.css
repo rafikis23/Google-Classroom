@@ -1,0 +1,18 @@
+    h3 {
+        position: absolute !important;
+        bottom: 5px !important;
+        left: 10px !important;
+        color: whitesmoke !important;
+        font-size: 1.4rem !important;
+        margin-bottom: 4.5rem !important;
+        margin-top: 1.5rem !important;
+    }
+    
+    h5 {
+        position: absolute !important;
+        bottom: 9px !important;
+        left: 10px !important;
+        color: whitesmoke !important;
+        font-size: 1.5wrem !important;
+        margin-bottom: 2.0rem !important;
+    }

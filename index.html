@@ -8,14 +8,55 @@
     <!--CSS-->
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/estilos.css">
     <!--Webfonts-->
     <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/805e6a4495.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="bg-light">
+    <nav class="nav fixed-top bg-custom border">
+        <a class="navbar-brand">
+            <img src="img/logo.png">
+        </a>
+        <div class="d-flex justify-content-center">
+            <ul class="nav m-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-6 col-md-3 ml-auto">
+            <button class="botonborder " type="button"><i class="fas fa-plus"></i></button>
+            <button class="botonborder " type="button"><i class="fas fa-list"></i></button>
+            <button class="botonborder " type="button">
+                <i><img class="botonimagen" src="img/users/goku.jpg" alt="..."></i>
+              </button>
+        </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
 
+
+        <div class="row my-5" id="generar-clases">
+
+        </div>
+
+    </div>
 </body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/controlador.js"></script>
 
 </html>
