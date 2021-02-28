@@ -399,27 +399,132 @@ for (i = 0; i < classroom.length; i++) {
 let aula = JSON.parse(localStorage.getItem('classroom'));
 console.log('Estos es lo que devuele', aula);
 
-function listarInstructores() {
+function verInstructor() {
     let aula = JSON.parse(localStorage.getItem('classroom'));
-    for (i = 0; i < aula.length; i++) {
-        const aulaImagen = aula[i];
-        console.log('Aqui devolver la imagen', aulaImagen.instructor.imagen);
+    for (let i = 0; i < aula.length; i++) {
+        document.getElementById('instructorSeleccionado').innerHTML +=
+            `<option value="${i}">${aula[i].instructor.nombre}</option>`
     }
 }
-listarInstructores();
 
-function instructorSeleccionado() {
 
+
+
+verInstructor();
+
+function generarClases(id) {
+    let aula = JSON.parse(localStorage.getItem('classroom'));
+    let clasesSeleccionada = aula[id].clases;
+    console.log(clasesSeleccionada);
+    for (let j = 0; j < clasesSeleccionada.length; j++) {
+        let aulaClases = clasesSeleccionada[j];
+        console.log(aulaClases);
+        document.getElementById('generar-clases').innerHTML +=
+            `<div class="my-4 col-lg-3 col-md-4 col-sm-10">
+            <div  class="card">
+                <div style="    position: relative; display: inline-block; text-align: start-center">
+                    <img src=${aulaClases.fondo}  class="card-img-top " alt="... ">
+                    <h3 >${aulaClases.nombreClase}</h3>
+                    <h5>${aulaClases.seccion}</h5>
+                </div>
+                <div id="prueba" >
+                <div class="card-body">
+                <h4>Titulo</h4>
+                <h6>Fecha</h6>
+                </div>
+                </div>
+        
+            <ul class="list-group list-group-flush ml-auto">
+                <li class="list-group-item">
+                <i class="fas fa-chart-line ml-10"></i>
+                <i class="far fa-folder"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>`;
+        /*
+        for (let k = 0; k < aulaClases.asignaciones.length; k++) {
+            let aulAsignaciones = aulaClases.asignaciones[k];
+            console.log(aulAsignaciones);
+            document.querySelector('#prueba').innerHTML +=
+
+                `
+                <div class="card-body">
+                <h4>${aulAsignaciones.titulo}</h4>
+                <h6>${aulAsignaciones.fecha}</h6>
+                </div>`;
+        }*/
+    }
 }
 
-function generarClases() {
+function cambiarInstructor() {
+    let instructorActivo = document.querySelector('#instructorSeleccionado').value;
+    document.getElementById('texto-inicio').innerHTML = `
+    <i><img class="botonimagen" src="${aula[instructorActivo].instructor.imagen}" alt="..."></i>
+    `;
+    //console.log(instructorActivo);
+    generarClases(instructorActivo);
+
+    return instructorActivo;
+}
+
+/*
+        document.getElementById('generar-clases').innerHTML +=
+            `<div class="my-4 col-lg-3 col-md-4 col-sm-10">
+            <div  class="card">
+                <div style="    position: relative; display: inline-block; text-align: start-center">
+                    <img src=${aulaClases[j].fondo}  class="card-img-top " alt="... ">
+                    <h3 >${aulaClases[j].nombreClase}</h3>
+                    <h5>${aulaClases[j].seccion}</h5>
+                </div>
+                <div id="prueba" class="card-body">
+                </div>
+        
+        <ul class="list-group list-group-flush ml-auto">
+            <li class="list-group-item">
+            <i class="fas fa-chart-line ml-10"></i>
+            <i class="far fa-folder"></i>
+                </li>
+            </ul>
+        </div>
+    </div>`;
+
+/*
+for (let j = 0; j < clasesSeleccionada.clases.length; j++) {
+    let aulaClases = clasesSeleccionada.clases[j];
+    console.log(aulaClases);
+  */
+/*
+document.getElementById('generar-clases').innerHTML +=
+    `<div class="my-4 col-lg-3 col-md-4 col-sm-10">
+            <div  class="card">
+                <div style="    position: relative; display: inline-block; text-align: start-center">
+                    <img src=${aulaClases.fondo}  class="card-img-top " alt="... ">
+                    <h3 >${aulaClases.nombreClase}</h3>
+                    <h5>${aulaClases.seccion}</h5>
+                </div>
+                <div id="prueba" class="card-body">
+                </div>
+        
+        <ul class="list-group list-group-flush ml-auto">
+            <li class="list-group-item">
+            <i class="fas fa-chart-line ml-10"></i>
+            <i class="far fa-folder"></i>
+                </li>
+            </ul>
+        </div>
+    </div>`;*/
+
+
+
+/*
     let aula = JSON.parse(localStorage.getItem('classroom'));
     document.getElementById('generar-clases').innerHTML = ``;
-    for (let i = 0; i < aula.length; i++) {
-        for (let j = 0; j < aula[i].clases.length; j++) {
-            let aulaClases = aula[i].clases[j];
-            document.getElementById('generar-clases').innerHTML +=
-                `<div class="my-4 col-lg-3 col-md-4 col-sm-10">
+    let clasesSeleccionada = aula[instructorActivo].instructor[instructorActivo]
+    for (let j = 0; j < clasesSeleccionada.clases.length; j++) {
+        let aulaClases = clasesSeleccionada.clases[j];
+        document.getElementById('generar-clases').innerHTML +=
+            `<div class="my-4 col-lg-3 col-md-4 col-sm-10">
                     <div  class="card">
                         <div style="    position: relative; display: inline-block; text-align: start-center">
                             <img src=${aulaClases.fondo}  class="card-img-top " alt="... ">
@@ -438,84 +543,63 @@ function generarClases() {
                 </div>
             </div>`;
 
-            for (let k = 0; k < aula[i].clases[j].asignaciones.length; k++) {
-                let aulAsignaciones = aula[i].clases[j].asignaciones[k]
-                console.log('Las clases son:', aulAsignaciones.titulo);
-                document.getElementById('prueba').innerHTML +=
-                    `                
+        for (let k = 0; k < aulaClases.asignaciones.length; k++) {
+            let aulAsignaciones = aulaClases.asignaciones[k]
+            console.log('Las clases son:', aulAsignaciones.titulo);
+            document.getElementById('prueba').innerHTML +=
+                `                
     
                     <h6 class="card-title">${aulAsignaciones.fecha}</h6>
                     <p class="card-text ">Titulo</p>
     
             `;
-            }
-
-
         }
 
 
-    }
 
-    /*
-    <div class="container-fluid">
-        <div class="row" id="clases">
-            <div class="my-4 col-lg-2 col-md-3 col-6">
-                <div class="card">
-                    <div style="position: relative; display: inline-block; text-align: center;">
-                        <img src="img/clases-pics/2.jpg" class="card-img-top" alt="... ">
-                        <h3 style="position: absolute; bottom: 5px; left: 10px; color: white;">Clase 1</h3>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title ">${aplicacion.nombre}</h5>
-                        <p class="card-text ">${aplicacion.desarrollador} </p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                    </ul>
+
+
+    }
+}
+*/
+
+
+/*
+<div class="container-fluid">
+    <div class="row" id="clases">
+        <div class="my-4 col-lg-2 col-md-3 col-6">
+            <div class="card">
+                <div style="position: relative; display: inline-block; text-align: center;">
+                    <img src="img/clases-pics/2.jpg" class="card-img-top" alt="... ">
+                    <h3 style="position: absolute; bottom: 5px; left: 10px; color: white;">Clase 1</h3>
                 </div>
+                <div class="card-body">
+                    <h5 class="card-title ">${aplicacion.nombre}</h5>
+                    <p class="card-text ">${aplicacion.desarrollador} </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                </ul>
             </div>
         </div>
     </div>
-    */
+</div>
+*/
 
-    /*
-        for (let i = 0; i < aula.length; i++) {
-            document.getElementById('generar-clases').innerHTML +=
-                `<div class="my-4 col-lg-2 col-md-3 col-6">
-                <div class="card">
-                    <img src="img/clases-pics/2.jpg" class="card-img-top " alt="... ">
-                    <div class="card-body">
-                        <h5 class="card-title ">${aula[i].instructor.nombre}</h5>
-                        <p class="card-text ">${aula[i].instructor.correo}  </p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                    </ul>
-                </div>
-            </div>`;
-        }
-    */
-
-}
-
-generarClases();
-
-
-function verInstructor() {
-    let aula = JSON.parse(localStorage.getItem('classroom'));
+/*
     for (let i = 0; i < aula.length; i++) {
-        document.getElementById('instructorSeleccionado').innerHTML +=
-            `<option value="${i}">${aula[i].instructor.nombre}</option>`
+        document.getElementById('generar-clases').innerHTML +=
+            `<div class="my-4 col-lg-2 col-md-3 col-6">
+            <div class="card">
+                <img src="img/clases-pics/2.jpg" class="card-img-top " alt="... ">
+                <div class="card-body">
+                    <h5 class="card-title ">${aula[i].instructor.nombre}</h5>
+                    <p class="card-text ">${aula[i].instructor.correo}  </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                </ul>
+            </div>
+        </div>`;
     }
-}
-
-function cambiarUsuario() {
-    let usuarioActivo = document.querySelector('#instructorSeleccionado').value;
-    document.getElementById('texto-inicio').innerHTML = `
-    <i><img class="botonimagen" src="${aula[usuarioActivo].instructor.imagen}" alt="..."></i>
-    `;
-    return usuarioActivo;
-}
-
-
-verInstructor();
+*/
