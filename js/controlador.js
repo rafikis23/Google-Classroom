@@ -417,22 +417,18 @@ function generarClases() {
     document.getElementById('generar-clases').innerHTML = ``;
     for (let i = 0; i < aula.length; i++) {
         for (let j = 0; j < aula[i].clases.length; j++) {
-            const aulaClases = aula[i].clases[j];
-            for (let k = 0; k < aula[i].clases[j].asignaciones.length; k++) {
-                const aulAsignaciones = aula[i].clases[j].asignaciones[k]
-                console.log('Las clases son:', aulaClases.nombreClase);
-                document.getElementById('generar-clases').innerHTML +=
-                    `<div class="my-4 col-lg-3 col-md-4 col-sm-10">
-                    <div class="card">
+            let aulaClases = aula[i].clases[j];
+            document.getElementById('generar-clases').innerHTML +=
+                `<div class="my-4 col-lg-3 col-md-4 col-sm-10">
+                    <div  class="card">
                         <div style="    position: relative; display: inline-block; text-align: start-center">
                             <img src=${aulaClases.fondo}  class="card-img-top " alt="... ">
                             <h3 >${aulaClases.nombreClase}</h3>
                             <h5>${aulaClases.seccion}</h5>
                         </div>
-                <div class="card-body">
-                    <h6 class="card-title">${aulAsignaciones.fecha}</h6>
-                    <p class="card-text ">${aulAsignaciones.titulo} </p>
-                </div>
+                        <div id="prueba" class="card-body">
+                        </div>
+                
                 <ul class="list-group list-group-flush ml-auto">
                     <li class="list-group-item">
                     <i class="fas fa-chart-line ml-10"></i>
@@ -441,10 +437,25 @@ function generarClases() {
                     </ul>
                 </div>
             </div>`;
+
+            for (let k = 0; k < aula[i].clases[j].asignaciones.length; k++) {
+                let aulAsignaciones = aula[i].clases[j].asignaciones[k]
+                console.log('Las clases son:', aulAsignaciones.titulo);
+                document.getElementById('prueba').innerHTML +=
+                    `                
+    
+                    <h6 class="card-title">${aulAsignaciones.fecha}</h6>
+                    <p class="card-text ">Titulo</p>
+    
+            `;
             }
 
+
         }
+
+
     }
+
     /*
     <div class="container-fluid">
         <div class="row" id="clases">
@@ -468,23 +479,43 @@ function generarClases() {
     */
 
     /*
-    for (let i = 0; i < aula.length; i++) {
-        document.getElementById('generar-clases').innerHTML +=
-            `<div class="my-4 col-lg-2 col-md-3 col-6">
-            <div class="card">
-                <img src="img/clases-pics/2.jpg" class="card-img-top " alt="... ">
-                <div class="card-body">
-                    <h5 class="card-title ">${aula[i].instructor.nombre}</h5>
-                    <p class="card-text ">${aula[i].instructor.correo}  </p>
+        for (let i = 0; i < aula.length; i++) {
+            document.getElementById('generar-clases').innerHTML +=
+                `<div class="my-4 col-lg-2 col-md-3 col-6">
+                <div class="card">
+                    <img src="img/clases-pics/2.jpg" class="card-img-top " alt="... ">
+                    <div class="card-body">
+                        <h5 class="card-title ">${aula[i].instructor.nombre}</h5>
+                        <p class="card-text ">${aula[i].instructor.correo}  </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                    </ul>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                </ul>
-            </div>
-        </div>`;
-    }
-*/
+            </div>`;
+        }
+    */
 
 }
 
 generarClases();
+
+
+function verInstructor() {
+    let aula = JSON.parse(localStorage.getItem('classroom'));
+    for (let i = 0; i < aula.length; i++) {
+        document.getElementById('instructorSeleccionado').innerHTML +=
+            `<option value="${i}">${aula[i].instructor.nombre}</option>`
+    }
+}
+
+function cambiarUsuario() {
+    let usuarioActivo = document.querySelector('#instructorSeleccionado').value;
+    document.getElementById('texto-inicio').innerHTML = `
+    <i><img class="botonimagen" src="${aula[idInstructor].imagen}" alt="..."></i>
+    `;
+    return usuarioActivo;
+}
+
+
+verInstructor();
