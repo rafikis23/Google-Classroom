@@ -5,7 +5,7 @@ var classroom = [{
     instructor: {
         nombre: "Goku",
         correo: "goku@gmail.com",
-        imagen: "goku.jpg",
+        imagen: "img/users/goku.jpg",
     },
     clases: [{
             nombreClase: "Programación II",
@@ -512,7 +512,7 @@ function verInstructor() {
 function cambiarUsuario() {
     let usuarioActivo = document.querySelector('#instructorSeleccionado').value;
     document.getElementById('texto-inicio').innerHTML = `
-    <i><img class="botonimagen" src="${aula[idInstructor].imagen}" alt="..."></i>
+    <i><img class="botonimagen" src="${aula[usuarioActivo].instructor.imagen}" alt="..."></i>
     `;
     return usuarioActivo;
 }
